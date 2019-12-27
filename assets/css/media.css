@@ -1,0 +1,94 @@
+@media screen and (max-width: 600px) {
+
+
+
+/****display-none*****/
+
+.mc-br-rght
+{
+border:0px transparent !important;
+}
+/****display-none*****/
+
+
+    .mc-main-banner {
+        padding: 90px 0px 50px !important;
+        background-image: url(../images/minicabee-hero.svg);
+    }
+    .mc-book-container
+    {
+        display: block !important;
+    }
+    .mc-banner-p {
+        font-size: 18px !important;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+h1
+{
+font-size:30px !important;
+line-height:45px !important;
+}
+.mc-sidetabs img {
+    margin: 10px 0px;
+    width: 50px !important;
+    height: 50px !important;
+}
+.mc-sidetabs {
+    top: 120px !important;
+}
+.mc-25, .mc-20, .mc-15, .mc-10
+{
+    max-width:400px !important;
+    width:100%;
+}
+.mat-80 {
+    margin-top:20px !important;
+}
+.mc-quote-btn
+{
+    width:100%;
+}
+
+.mc-features {
+    padding: 10px 30px;
+    max-width: 1140px !important;
+    width: 100%;
+    margin: 0 auto;
+    position: relative !important;
+    top: 30px;
+    background: transparent !important;
+
+}
+.mc-features h3
+{
+    font-family: 'GraphikWeb-Semibold' !important;
+    font-size: 18px !important;
+    color:#ffffff;
+}
+.mc-features p
+{
+    font-size:14px !important;
+    color:#ffffff !important;
+}
+
+.mc-about 
+{
+    padding:30px 0px !important; 
+}
+
+.mc-about h3{
+    font-size:30px !important;
+
+}
+.sec-img-max
+{
+    max-width:240px !important;
+    width:100%;
+    margin:0 auto;
+}
+.mc-edit-quote
+{
+    display:none;
+}
+}
