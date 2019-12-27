@@ -330,9 +330,8 @@ li.mc-login a
 {
   background-color:#000000;
 }
-.navbar-toggle 
-{
-  margin-top: -5px !important;
+.navbar-toggle {
+  margin-top: 5px !important;
   margin-left: -2px !important;
 }
 .mc-signup
@@ -752,7 +751,8 @@ line-height: 32px;
     font-size: 0.9em;
     background: #fff;
     text-align: left;
-    max-width:280px;
+    margin-top:20px;
+    max-width:380px;
     height: 315px;
     display: block;
     float: left;
@@ -853,7 +853,8 @@ line-height: 32px;
   font-size: 0.9em;
   background: #fff;
   text-align: left;
-  max-width:280px;
+  margin-top:20px;
+  max-width:440px;
   height: 250px;
   display: block;
   float: left;
@@ -1030,14 +1031,14 @@ line-height:34px;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-top:10px;
-margin-right:20px;
+  margin-top: 10px;
+  margin-right: 20px;
   background-color: #ffffff;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.2);
   font-family: 'ProximaNovaSemibold';
   position: relative;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #f2f2f2;
 }
 .taxisimg {
   max-width: 95px;
@@ -1124,3 +1125,18 @@ margin-top:80px;
   font-weight: 500;
   font-family:'GraphikWeb-Medium' !important;
 }
+
+
+/******booking-page******/
+
+
+
+/****partner-wrapper*****/
+
+.partner-wrapper
+{
+  max-width:800px;
+  width:100%;
+  margin:80px auto 0px;
+}
+
