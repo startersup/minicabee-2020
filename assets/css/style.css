@@ -1,6 +1,6 @@
 @import "fonts.css";
 @import "media.css";
-
+@import "custom-calender.css";
  body
  {
    overflow-x:hidden;
@@ -28,6 +28,34 @@
 
 a{
   text-decoration: none;
+}
+
+.mc-time-date-popup
+{
+    min-width:300px;
+    width:100%;
+    height:600px;
+      position: absolute;
+      z-index:1;
+      background-color:#ffffff;
+   box-shadow: 0 0px 50px 0 rgba(0,0,0,0.2);
+
+}
+
+
+.time-head
+{
+    margin-top:10px;
+    font-size:18px;
+    padding:10px 0px;
+    text-align: center;
+    font-family: 'GraphikWeb-Medium';
+}
+.mc-time
+{
+    padding:0px 20px;
+    display:flex;
+   margin:10px 0px;
 }
 
 .popups
@@ -380,7 +408,7 @@ li.mc-login a
   border:none;
   margin: 8px 0px;
   color: #000000 !important;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'GraphikWeb-regular';
   box-sizing: border-box;
 }
@@ -392,7 +420,7 @@ li.mc-login a
   border:none;
   margin: 8px 0px;
   color: #000000 !important;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'GraphikWeb-Regular';
   box-sizing: border-box;
 }
@@ -451,8 +479,44 @@ margin-top:-10px;
   border:none;
   margin: 8px 0px;
   color: #000000 !important;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'GraphikWeb-Regular';
+  box-sizing: border-box;
+}
+
+.select
+{
+      -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+    margin-top:-10px;
+  padding: 8px;
+    margin-right:2px;
+    margin-left:2px;
+  max-width:300px;
+  width:100%;
+  min-height: 20px;
+  border:1px solid #ebebeba6 !important;
+  color: #212529;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'GraphikWeb-Medium';
+  background-color:rgb(250, 250, 250) !important;;
+  box-sizing: border-box;
+}
+.mc-input-select
+{
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+      -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  min-height: 30px;
+  border:none;
+  margin: 8px 0px;
+  color: #000000 !important;
+  font-size: 15px;
+  font-family: 'GraphikWeb-regular';
   box-sizing: border-box;
 }
 
@@ -468,6 +532,10 @@ margin-top:-10px;
 .nopadding {
   padding: 10px !important;
   margin: 0px !important;
+}
+.box
+{
+    display:none !important;
 }
 
 
@@ -547,6 +615,16 @@ margin-top:-10px;
   color: #ffffff !important;
   padding: 10px 40px;
   font-family: 'GraphikWeb-Medium';
+}
+.mc-set-btn
+{
+    margin-top:10px;
+  font-size:12px;
+    border:none;
+  background-color: #1f80ff !important;
+  color: #ffffff !important;
+  padding: 5px 10px;
+  font-family: 'GraphikWeb-Medium';   
 }
 .close
 {
@@ -1146,5 +1224,32 @@ margin-top:80px;
   max-width:800px;
   width:100%;
   margin:80px auto 0px;
+}
+
+/****partner-wrapper*****/
+
+
+
+
+/*****date-time calender****/
+
+.pignose-calendar {
+    width: 100%;
+    min-width: 300px;
+    background-color: #fff;
+   border:none !important;
+    font-size: 100%;
+   box-shadow:none !important;
+
+}
+.pignose-calendar-body 
+{
+       box-shadow:none !important;
+    background-color: #ffffff;
+}
+.pignose-calendar-header
+{
+    margin-top:0px !important;
+    background-color:#ffffff;
 }
 

@@ -34,8 +34,13 @@ border:0px transparent !important;
     }
 h1
 {
-font-size:30px !important;
-line-height:45px !important;
+font-size:28px !important;
+}
+    .mc-main-banner h1 {
+    font-family: 'GraphikWeb-Semibold' !important;
+    font-size:28px;
+    line-height: 38px !important;
+    letter-spacing: 1px;
 }
 .mc-sidetabs img {
     margin: 10px 0px;
@@ -112,7 +117,7 @@ line-height:45px !important;
     top: 10px;
     letter-spacing: 1px;
     border-radius: 2px;
-    font-size: 14px;
+    font-size: 12px;
     background-color: #fedf00;
 }
 

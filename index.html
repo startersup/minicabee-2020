@@ -27,18 +27,21 @@
     <link rel="icon" href="./assets/images/nav-icons/favicon.png" type="image/x-icon"  sizes="16x16" />
     <link href="./assets/css/style.css" rel="stylesheet">
     <link href="./assets/css/media.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/themes/prism.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/icon.min.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/custom-calendar.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.mfin.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+
 </head>
     <body>
 <div id="navbar"></div>
@@ -71,41 +74,105 @@
  </div>
  <div class="mc-20">
     <img class="mc-input-icon" src="./assets/images/nav-icons/datetime.svg">
-    <input type="text"  class="mc-time-controls" autocomplete="off"  placeholder="Date and Time"> 
+    <div><input type="text"  class="mc-time-controls datetime" autocomplete="off" name="date-time" id="date"  value="" placeholder="Date and Time">
+          <div class="mc-time-date-popup" id="DateTimeDiv" style="display:none;">
+               <div class="calendar-blue"></div>
+        <div id="myDate" class="box"></div>
+           <p class="time-head">Select Time:</p>
+         <div class="mc-time">
+             <select id="hours" name="hours" class="select">
+  <option value="00">00</option>
+  <option value="01">01</option>
+  <option value="02">02</option>
+  <option value="03">03</option>
+  <option value="04">04</option>   
+  <option value="05">05</option>
+  <option value="06">06</option>
+  <option value="07">07</option>
+  <option value="08">08</option>
+  <option value="09">09</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>              
+</select>:
+              <select id="minutes" name="secs" class="select">
+  <option value="00">00</option>
+  <option value="05">05</option>
+  <option value="10">10</option>
+  <option value="15">15</option>
+  <option value="20">20</option>   
+  <option value="25">25</option>
+  <option value="30">30</option>
+  <option value="35">35</option>
+  <option value="40">40</option>
+  <option value="45">45</option>
+  <option value="40">50</option>
+  <option value="45">55</option>
+</select>
+         </div>
+
+            <center> <button name="date" onclick="setDate();" id="SetDateTime" class="mc-set-btn">Set Date and Time</button></center>
+     </div>
+     </div>
+     <script>
+     
+         $('.datetime').click(function(event){
+$('#DateTimeDiv').css({"display":"block"});
+          
+});
+         
+         function setDate()
+         {
+             document.getElementById('date').value =document.getElementById('myDate').innerHTML+" "+document.getElementById('hours').value+":"+document.getElementById('minutes').value;
+             
+             $('#DateTimeDiv').css({"display":"none"});
+         }
+ 
+     </script>
+
  </div>
  <div class="mc-15">
     <img class="mc-input-icon" src="./assets/images/nav-icons/user.svg">
-    <input type="text"  class="mc-input-controls" autocomplete="off"  placeholder="Passengers"> 
-    <!-- <div class="popups">
-        <ul>
-            <li>1 Passenger</li>
-            <li>2 Passengers</li>
-            <li>3 Passengers</li>
-            <li>4 Passengers</li>
-            <li>5 Passengers</li>
-            <li>6 Passengers</li>
-            <li>7 Passengers</li>
-            <li>8 Passengers</li>
-            <li>9 Passengers</li>
-            <li>10 Passengers</li>
-        </ul>
-    </div> -->
+               <select  name="passenger" class="mc-input-select">
+  <option value="0">0 Passenger</option>
+  <option value="1">1 Passenger</option>
+  <option value="2">2 Passengers</option>
+  <option value="3">3 Passengers</option>
+  <option value="4">4 Passengers</option>   
+  <option value="5">5 Passengers</option>
+  <option value="6">6 Passengers</option>
+  <option value="7">7 Passengers</option>
+  <option value="8">8 Passengers</option>
+  <option value="9">9 Passengers</option>
+  <option value="10">10 Passengers</option>
+</select>
  </div>
  <div class="mc-15">
     <img class="mc-input-icon" src="./assets/images/nav-icons/suitcase.svg">
-    <input type="text" class="mc-luggage-controls"  autocomplete="off"  placeholder="Luggages"> 
-    <!-- <div class="popups">
-        <ul>
-            <li>1 Luggage</li>
-            <li>2 Luggages</li>
-            <li>3 Luggages</li>
-            <li>4 Luggages</li>
-            <li>5 Luggages</li>
-            <li>6 Luggages</li>
-            <li>7 Luggages</li>
-            <li>8 Luggages</li>
-        </ul>
-    </div> -->
+                  <select  name="Luggage" class="mc-input-select">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>   
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
  </div>
  <div class="mc-15">
  <button class="mc-quote-btn">Get Quote</button>
@@ -305,7 +372,7 @@
                 </div>
         </div>
     <div></div>
-    </div>
+
     </section>
 
 
@@ -543,8 +610,78 @@
     </div>
 </div>
 <!-- modal dialog end -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+<script type="text/javascript" src="./assets/js/custom-calender.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $('#wrapper .version strong').text('v' + $.fn.pignoseCalendar.version);
+
+        function onSelectHandler(date, context) {
+
+            var $element = context.element;
+            var $calendar = context.calendar;
+            var $box = $element.siblings('.box').show();
+            var text = '';
+
+            if (date[0] !== null) {
+                text += date[0].format('YYYY-MM-DD');
+            }
+
+            if (date[0] !== null && date[1] !== null) {
+                text += ' ~ ';
+            }
+            else if (date[0] === null && date[1] == null) {
+                text += 'nothing';
+            }
+
+            if (date[1] !== null) {
+                text += date[1].format('YYYY-MM-DD');
+            }
+
+            $box.text(text);
+        }
+
+        function onApplyHandler(date, context) {
+   
+            var $element = context.element;
+            var $calendar = context.calendar;
+            var $box = $element.siblings('.box').show();
+            var text = 'You applied date ';
+
+            if (date[0] !== null) {
+                text += date[0].format('YYYY-MM-DD');
+            }
+
+            if (date[0] !== null && date[1] !== null) {
+                text += ' ~ ';
+            }
+            else if (date[0] === null && date[1] == null) {
+                text += 'nothing';
+            }
+
+            if (date[1] !== null) {
+                text += date[1].format('YYYY-MM-DD');
+            }
+
+            $box.text(text);
+        }
 
 
+
+        // Blue theme type Calendar
+        $('.calendar-blue').pignoseCalendar({
+            theme: 'blue', // light, dark, blue
+            select: onSelectHandler
+        });
+
+
+        $('.menu .item').tab();
+    });
+    //]]>
+</script>
 
 
 
@@ -555,8 +692,10 @@
         //  $('#foot').load("footer.html");
     
     });
-    </script>
+    
 
+    </script>
+    
 
 <script src="./assets/js/include.js"></script>
 
