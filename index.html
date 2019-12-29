@@ -41,119 +41,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
 </head>
     <body>
-<nav class="mc-navbar mc-bx-shdw">
-    <div class="container mc-flex-row">
-        <button type="button" class="navbar-toggle left-iconbar" data-toggle="modal" data-target="#mobilenav">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-   <div class="mc-navbar-logo"><a href="index.html"><img class="mc-place" src="./assets/images/nav-icons/minicab.png"> </a></div> 
-   <p class="mobile-call">Call us Now</p>
-    <div class="mc-navbar-lft hidden-xs hidden-sm">
-    <ul>
-    <li class="dropdown"><a class="dropdown-toggle custom-arrow">Our Services</a>
-        <div class="mc-dropdown-content mc-bx-shdw">
-              <div class="row mc-less-top">
-                  <div class="col-md-6">
-              <div class="mc-linker">
-                  <div class="inline">
-                      <img src="./assets/images/nav-icons/airplane.svg">
-                  </div>
-                  <div class="inline"> 
-							<span class="mc-nav-drop-title">Airport Transfers</span><br/>
-                            <span class="mc-tagline">Get Airport Trips covered ontime</span>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mc-linker">
-                            <div class="inline">
-                                <img src="./assets/images/nav-icons/train.svg">
-                            </div>
-                            <div class="inline"> 
-                                      <span class="mc-nav-drop-title">Train Transfers</span><br/>
-                                      <span class="mc-tagline">Get Station Taxis instantly now</span>
-                                  </div>
-                              </div>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="mc-linker">
-                                    <div class="inline">
-                                        <img src="./assets/images/nav-icons/school.svg">
-                                    </div>
-                                    <div class="inline"> 
-                                              <span class="mc-nav-drop-title">School Transfers</span><br/>
-                                              <span class="mc-tagline">Safe and secured School Transit</span>
-                                          </div>
-                                      </div>
-                                      </div>
-
-                                      <div class="col-md-6">
-                                        <div class="mc-linker">
-                                            <div class="inline">
-                                                <img src="./assets/images/nav-icons/university.svg">
-                                            </div>
-                                            <div class="inline"> 
-                                                      <span class="mc-nav-drop-title">University Transfers</span><br/>
-                                                      <span class="mc-tagline">Huge Discounts for students</span>
-                                                  </div>
-                                              </div>
-                                              </div>
-
-
-                                              <div class="col-md-6">
-                                                <div class="mc-linker">
-                                                    <div class="inline">
-                                                        <img src="./assets/images/nav-icons/brokerage.svg">
-                                                    </div>
-                                                    <div class="inline"> 
-                                                              <span class="mc-nav-drop-title">Corporate Transfers</span><br/>
-                                                              <span class="mc-tagline">Manage your Employee Travel</span>
-                                                          </div>
-                                                      </div>
-                                                      </div>
-
-                                                      <div class="col-md-6">
-                                                        <div class="mc-linker">
-                                                            <div class="inline">
-                                                                <img src="./assets/images/nav-icons/ship.svg">
-                                                            </div>
-                                                            <div class="inline"> 
-                                                                      <span class="mc-nav-drop-title">Cruise Transfers</span><br/>
-                                                                      <span class="mc-tagline">Bon Voyage starts with us</span>
-                                                                  </div>
-                                                              </div>
-                                                              </div>
-                    </div>
-						</div>     
-        </li>
-           <li><a>Customers</a></li>
-        <li><a>Partners</a></li>
-        <li><a>Support</a></li>   
-    </ul>    
-    </div>
-        <div class="mc-navbar-rght hidden-xs hidden-sm">
-        <ul>
-        <li class="mc-login"><a>Login</a></li>
-        <li class="mc-signup"><a data-toggle="modal" data-target="#mc-signup">Signup</a></li>
-        </ul>
-        </div>
-        </div>
-</nav>
+<div id="navbar"></div>
 
 
 <section class="mc-main-banner">
     <div class="mc-sidetabs">
        <ul>
-          <li>
+          <li  class="active" data-toggle="tab" href="#single-way">
            <img src="./assets/images/nav-icons/one-way.svg">
           </li> 
-          <li>
+          <li data-toggle="tab" href="#two-way">
             <img src="./assets/images/nav-icons/two-way.svg">
           </li> 
        </ul> 
     </div>
+    <div class="tab-content">
+        <div id="single-way" class="tab-pane fade in active">
 <div class="container">
 <h1 class="white center">Book Cheap Taxis and Minicabs Online </h1>
 <p class="white center mc-banner-p">Reliable | Safe & Secure | Trust</p>
@@ -232,10 +135,96 @@
         </div>
     </div>
    </div> 
-</div>
-</div>    
-</section>
+    </div></div></div>
+<div id="two-way" class="tab-pane fade">
+    <div class="container">
+    <h1 class="white center">Book Two way journey Extremely Cheaper  </h1>
+    <p class="white center mc-banner-p">Reliable | Safe & Secure | Trust</p>
+    <div class="mc-book-container">
+    <div class="mc-20">
+        <img class="mc-input-icon" src="./assets/images/nav-icons/location.svg">
+       <input class="mc-input-controls" id="autocomplete2" autocomplete="off" placeholder="Pickup Postcode"> 
+    </div>
+    <div class="mc-20">
+        <img class="mc-input-icon" src="./assets/images/nav-icons/location.svg">
+        <input  type="text"  class="mc-input-controls" id="autocomplete"  autocomplete="off"  placeholder="Dropoff Postcode"> 
+     </div>
+     <div class="mc-20">
+        <img class="mc-input-icon" src="./assets/images/nav-icons/datetime.svg">
+        <input type="text"  class="mc-time-controls" autocomplete="off"  placeholder="Date and Time"> 
+     </div>
+     <div class="mc-20">
+        <img class="mc-input-icon" src="./assets/images/nav-icons/datetime.svg">
+        <input type="text"  class="mc-time-controls" autocomplete="off"  placeholder=" Return Date and Time"> 
+     </div>
+     <div class="mc-10">
+        <img class="mc-input-icon" src="./assets/images/nav-icons/user.svg">
+        <input type="text"  class="mc-input-controls ellipsis" autocomplete="off"  placeholder="Passengers"> 
+        <!-- <div class="popups">
+            <ul>
+                <li>1 Passenger</li>
+                <li>2 Passengers</li>
+                <li>3 Passengers</li>
+                <li>4 Passengers</li>
+                <li>5 Passengers</li>
+                <li>6 Passengers</li>
+                <li>7 Passengers</li>
+                <li>8 Passengers</li>
+                <li>9 Passengers</li>
+                <li>10 Passengers</li>
+            </ul>
+        </div> -->
+     </div>
+     <div class="mc-10">
+        <img class="mc-input-icon" src="./assets/images/nav-icons/suitcase.svg">
+        <input type="text" class="mc-luggage-controls ellipsis"  autocomplete="off"  placeholder="Luggages"> 
+        <!-- <div class="popups">
+            <ul>
+                <li>1 Luggage</li>
+                <li>2 Luggages</li>
+                <li>3 Luggages</li>
+                <li>4 Luggages</li>
+                <li>5 Luggages</li>
+                <li>6 Luggages</li>
+                <li>7 Luggages</li>
+                <li>8 Luggages</li>
+            </ul>
+        </div> -->
+     </div>
+     <div class="mc-15">
+     <button class="mc-quote-btn">Get Quote</button>
+     </div>
+    </div>
+    <div class="mc-features" id="mc-border">
+       <div class="row">
+           <div class="col-md-4 mc-br-rght mc-flex-row">
+            <img class="mc-ft-icon" src="./assets/images/nav-icons/pound.svg">
+               <div class="mc-ft-pad">
+               <h3>Save More</h3>
+               <p>Book Two way journey and save upto 20% more for sure</p>
+            </div>
+           </div>
+           <div class="col-md-4 mc-br-rght mc-flex-row">
+            <img class="mc-ft-icon" src="./assets/images/nav-icons/email.svg">
+            <div class="mc-ft-pad">
+            <h3>Pre Confirmation</h3>
+            <p>Get all your travel information includes driver details prior</p>
+            </div>
+        </div>
+        <div class="col-md-4 mc-flex-row">
+            <img class="mc-ft-icon" src="./assets/images/nav-icons/24-7.svg">
+            <div class="mc-ft-pad">
+            <h3>24/7 Customer Support</h3>
+            <p>customer service around the clock through chat, email and phone.</p>
+            </div>
+        </div>
+       </div> 
+    </div>
 
+</div>
+</div>
+</div> 
+</section>
 
 <section class="mc-about">
 <div class="container ">
@@ -559,7 +548,14 @@
 
 
 
-
+<script>
+    $(document).ready(function(){
+       
+       $('#navbar').load("/navbar.html");
+        //  $('#foot').load("footer.html");
+    
+    });
+    </script>
 
 
 <script src="./assets/js/include.js"></script>

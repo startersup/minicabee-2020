@@ -104,7 +104,12 @@ margin-top:80px;
 {
   margin-top:20px; 
 }
-
+.ellipsis
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .mc-bx-shdw
 {
   box-shadow: 0 4px 20px 0 rgba(49,67,81,.07);
@@ -358,7 +363,10 @@ li.mc-login a
   margin:0 auto;
 }
 
-
+.mobile-call
+{
+  display:none;
+}
 /*****navbar****/
 
 
@@ -624,7 +632,7 @@ height:20px;
 {
   position: absolute;
   background: rgba(0,0,0,.2);
-  top:250px;
+  top:240px;
   padding:0px 2px 0px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
