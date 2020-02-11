@@ -647,10 +647,11 @@ cursor:pointer;
 
 .mc-main-banner
 {
-  min-height:500px;
+  min-height:550px;
   position: relative;
-  padding:120px 0px 50px; 
-  background-image: url(../images/minicabee-hero.svg);
+  padding:160px 0px 50px; 
+  background-image: url(../images/minicabee-hero.jpg);
+  background-size:cover;
 }
 .mc-book-container
 {
@@ -773,6 +774,10 @@ height:50px;
 /***main-banner***/
 
 
+.pignose-calendar.pignose-calendar-blue .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun
+{
+  color:#1f80ff !important;
+}
 
 /*****minicabee about******/
 
